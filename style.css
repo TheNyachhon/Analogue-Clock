@@ -1,0 +1,206 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    background-color: #D5D5D5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#clock{
+    background-color: #22222A;
+    box-shadow: 0 0 0.8em black;
+    width: 30em;
+    height: 30em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:3.5em; 
+}
+.box{
+    position: absolute;
+    width: 22%;
+    height: 45%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+/* Markings */
+#x-markings, #y-markings{
+    position: absolute;
+    width: 29em;
+    height: 29em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#y-markings{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.horizontal-markings{
+    background-color: white;
+    width: 8%;
+    height: 1px;
+}
+.vertical-markings{
+    background-color: white;
+    width: 1px;
+    height: 8%;
+}
+#hour,#minute{
+    transition: 1s all;
+}
+#hour, #seconds, #minute{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+/* Seconds hand */
+#seconds .handle{
+    width: 50%;
+    height: 50%;
+    border-left: 2px solid white;
+}
+/* Minute hand */
+#minute{
+    z-index: 1;
+}
+#minute .handle{
+    position: absolute;
+    bottom:50%;
+    width: 50.5%;
+    height: 40%;
+    border-left: 4px solid #f5f5f5;
+}
+/* Hour hand */
+#hour{
+    z-index: 2;
+}
+#hour .handle{
+    position: absolute;
+    bottom:50%;
+    width: 50.5%;
+    height: 35%;
+    border-left: 6px solid #5F5F5F;
+}
+/* center cap */
+#center{
+    width: 5%;
+    height: 5%;
+    background-color: #f5f5f5;
+    z-index: 9999;
+    border-radius: 50%;
+}
+/* Github link */
+#github{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#github{
+    bottom:2.5%;
+    right:2.5%;
+}
+#github i{
+    font-size:3em;
+    background-color: #f1faee;
+    border-radius: 50%;
+    transition: 500ms all;
+    border:2px solid #52B69A;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+#github i:hover{
+    background-color: #11111A;
+    color: #f1faee;
+}
+#github p{
+    background-color: #11111A;
+    color: white;
+    padding:0.2em;
+    border-radius: 0.5em;
+    opacity: 0.7;
+    margin-bottom: 0.2em;
+}
+.profile-hide{
+    visibility: hidden;
+}
+@media(min-width:1872px){
+    #seconds .handle{
+        position: absolute;
+        bottom:50%;
+        height: 45%;
+    }
+    #minute .handle{
+        height: 36%;
+    }
+    #hour .handle{
+        height: 30%;
+    }
+}
+@media(min-width:2560px){
+    #clock{
+        width: 38em;
+        height: 38em;
+    }
+    #x-markings, #y-markings{
+        width: 37em;
+        height: 37em;
+    }
+}
+@media(max-width:600px){
+    #clock{
+        width: 25em;
+        height: 25em;
+    }
+    #x-markings, #y-markings{
+        width: 24em;
+        height: 24em;
+    }
+    #seconds .handle{
+        position: absolute;
+        bottom:50%;
+        height: 40%;
+    }
+    #minute .handle{
+        height: 30%;
+    }
+    #hour .handle{
+        height: 25%;
+    }
+}
+@media(max-width:470px){
+    #clock{
+        width: 18em;
+        height: 18em;
+    }
+    #x-markings, #y-markings{
+        width: 17em;
+        height: 17em;
+    }
+    #seconds .handle{
+        position: absolute;
+        bottom:50%;
+        height: 26%;
+    }
+    #minute .handle{
+        height: 22%;
+    }
+    #hour .handle{
+        height: 18%;
+    }
+}
