@@ -196,11 +196,14 @@ a{
         position: absolute;
         bottom:50%;
         height: 26%;
+        border-width: 1px;
     }
     #minute .handle{
         height: 22%;
+        border-width: 2px;
     }
     #hour .handle{
         height: 18%;
+        border-width: 3.5px;
     }
 }
