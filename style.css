@@ -32,8 +32,8 @@ body{
     justify-content: flex-end;
     align-items: flex-end;
 }
-/* Markings */
-#x-markings, #y-markings{
+/* Graduations */
+.graduations{
     position: absolute;
     width: 29em;
     height: 29em;
@@ -42,21 +42,31 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-#y-markings{
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-.horizontal-markings{
+.mark{
     background-color: white;
     width: 8%;
     height: 1px;
 }
-.vertical-markings{
-    background-color: white;
-    width: 1px;
-    height: 8%;
+.y{
+    transform: rotate(90deg);
 }
+.a{
+    transform: rotate(120deg);
+}
+.b{
+    transform: rotate(150deg);
+}
+.c{
+    transform: rotate(30deg);
+}
+.d{
+    transform: rotate(60deg);
+}
+.mini .mark{
+    width: 4%;
+}
+
+/* Clock handles */
 #hour,#minute{
     transition: 1s all;
 }
@@ -157,7 +167,7 @@ a{
         width: 38em;
         height: 38em;
     }
-    #x-markings, #y-markings{
+    .graduations{
         width: 37em;
         height: 37em;
     }
@@ -167,7 +177,7 @@ a{
         width: 25em;
         height: 25em;
     }
-    #x-markings, #y-markings{
+    .graduations{
         width: 24em;
         height: 24em;
     }
@@ -188,7 +198,7 @@ a{
         width: 18em;
         height: 18em;
     }
-    #x-markings, #y-markings{
+    .graduations{
         width: 17em;
         height: 17em;
     }
